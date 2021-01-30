@@ -29,6 +29,9 @@ function arrSquared(arr1, arr2) {
   for (let val of arr2) {
     frequencyCounter2[val] = (frequencyCounter2[val] || 0) + 1;
   }
+
+  // fails if keys in fc1 dont match up
+  // with squared keys in fc2
   for (let key in frequencyCounter1) {
     if (!(key ** 2 in frequencyCounter2)) {
       return false;
