@@ -33,6 +33,8 @@ function binarySearch(arr, val) {
   while (arr[middle] !== val && start <= stop) {
     if (val < arr[middle]) stop = middle - 1;
     else start = middle + 1;
+    // changes value of middle to
+    // midpoint of new window
     middle = Math.floor((start + stop) / 2);
   }
   return arr[middle] === val ? middle : -1;
