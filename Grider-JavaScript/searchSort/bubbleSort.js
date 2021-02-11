@@ -21,13 +21,6 @@ function bubbleSort(arr) {
   for (var i = arr.length - 1; i > 0; i--) {
     noSwaps = true;
     for (var j = 0; j < i; j++) {
-      // console.log(arr[j], arr[j + 1]);
-      // j < arr.length: last item
-      // compared to undefined
-      // so arr.length should be less than i
-      // iterate i backwards
-      // so j < arr.length -1
-
       if (arr[j] > arr[j + 1]) {
         // SWAP!
         var temp = arr[j];
@@ -36,11 +29,17 @@ function bubbleSort(arr) {
         noSwaps = false;
       }
     }
-    if (noSwaps) break;
     console.log("ONE PASS COMPLETE!");
+    if (noSwaps) break;
   }
   console.log(arr);
   return arr;
 }
 
-bubbleSort([37, 42, 29, 8]);
+// notes
+// console.log(arr[j], arr[j + 1]);
+// j < arr.length: last item
+// compared to undefined
+// so arr.length should be less than i
+// iterate i backwards
+// so j < arr.length -1
