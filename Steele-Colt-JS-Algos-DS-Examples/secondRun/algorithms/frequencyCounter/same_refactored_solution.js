@@ -14,6 +14,10 @@ function same(arr1, arr2){
         frequencyCounter1[val] = (frequencyCounter1[val] || 0) + 1
     }
 
+// get the current value in frequency counter 
+// for the key val and add one to it.  
+// If there is no current value, set it to 1.
+
     // add one or initiliaze to 1
     for(let val of arr2){
         frequencyCounter2[val] = (frequencyCounter2[val] || 0) + 1        
@@ -37,3 +41,4 @@ function same(arr1, arr2){
 }
 
 same([1,2,3,2,5], [9,1,4,4,11])
+
