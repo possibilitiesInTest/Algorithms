@@ -8,16 +8,16 @@
 //   palindrome("abcdefg") === false
 
 function palindrome(str) {
-    const reversed = str.split("").reverse().join("");
-    return str === reversed;
+    if(str.length === 1) return true;
+    if(str.length === 2) return str[0] === str[1];
+    if(str[0] === str.slice(-1)) return palindrome(str.slice(1, -1))
+    return false;    
 }
 
 module.exports = palindrome;
 
 
 // function palindrome(str) {
-//     if(str.length === 1) return true;
-//     if(str.lenght === 2) return str[0] === str[1];
-//     if(str[0] === str.slice(-1)) return palindrome(str.slice(1, -1))
-//     return false;    
+//     const reversed = str.split("").reverse().join("");
+//     return str === reversed;
 // }
