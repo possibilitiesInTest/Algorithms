@@ -10,6 +10,8 @@ function reverse(str) {
     return str.split('').reduce((reversed, char) => char + reversed, '')
 }
 
+reverse("cats");
+
 module.exports = reverse;
 
 
