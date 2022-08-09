@@ -31,14 +31,15 @@ function steps(n, row = 0, stair ='') {
     }
 
     // increment stair:
-    if(stair.length <= row) {
-        stair += '#'; 
-        } else {
-            stair += ' ';
-        }
+    const add = stair.length <= row ? '#' : ' ';
+    // if(stair.length <= row) {
+    //     stair += '#'; 
+    //     } else {
+    //         stair += ' ';
+    //     }
 
     // recursive call to steps
-    steps(n, row, stair);
+    steps(n, row, stair+add);
 
 }
 
