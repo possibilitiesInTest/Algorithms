@@ -39,7 +39,7 @@ function steps(n, row = 0, stair ='') {
     //     }
 
     // recursive call to steps
-    steps(n, row, stair+add);
+    steps(n, row, stair + add);
 
 }
 
