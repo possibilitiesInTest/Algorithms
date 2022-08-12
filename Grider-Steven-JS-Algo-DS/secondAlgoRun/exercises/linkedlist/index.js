@@ -92,11 +92,23 @@ class LinkedList {
             if(counter === index) {
                 return node;
             } 
-
             counter++;
             node = node.next;
         }
         return null;
+    }
+
+    removeAt(index) {
+        if(!this.head) {
+            return;
+        }
+
+        const previous = this.getAt(index-1);
+        if(!previous || !previous.next) {
+            return;
+        }
+        
+        previous.next = previous.next.next;
     }
 
 }
