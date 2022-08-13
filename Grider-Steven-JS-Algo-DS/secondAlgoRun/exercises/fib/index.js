@@ -9,19 +9,23 @@
 //   fib(4) === 3
 
 function memoize(fn) {
+    //create cache
     const cache = {};
+
+    // return func w. cached arg-responses
     return function(...args) {
         if(cache[args]) {
             return cache[args];
         }
 
+    // call slowFib w. apply(this and args)
     const result = fn.apply(this, args);
+    //in cached obj, at key args: store result
     cache[args] = result;
-
+    //return result
     return result;
     }
 }
-
 
 function slowFib(n) {
     if(n < 2) {
@@ -29,7 +33,6 @@ function slowFib(n) {
     }
     return fib(n - 1) + fib(n - 2);
 }
-
 
 const fib = memoize(slowFib);
 
