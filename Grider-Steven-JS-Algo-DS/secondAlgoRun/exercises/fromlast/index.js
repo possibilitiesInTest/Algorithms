@@ -20,10 +20,11 @@ function fromLast(list, n) {
         n--;
     }
 
-    while(fast.next ) {
+    while(fast.next) {
         slow = slow.next;
         fast = fast.next;
     }
+    
     return slow;
 }
 
