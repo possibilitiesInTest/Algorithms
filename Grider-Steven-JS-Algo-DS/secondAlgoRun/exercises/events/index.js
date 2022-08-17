@@ -10,8 +10,10 @@ class Events {
 
   // Register an event handler
   on(eventName, callback) {
+    // if val exists at this.events, push the callback to teh arr
     if(this.events[eventName]) {
       this.events[eventName].push(callback);
+      //init new array that contains callback
     } else {
       this.events[eventName] = [callback];
     }
