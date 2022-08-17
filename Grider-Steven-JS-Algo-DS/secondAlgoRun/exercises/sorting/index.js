@@ -30,12 +30,13 @@ function selectionSort(arr) {
 }
 
 function swap(arr, indexOfMin, i) {
-    if(indexOfMin !== i) {
+    if(indexOfMin !== i) { 
+
+        [arr[i], arr[indexOfMin]] =  [arr[indexOfMin], arr[i]];
+
         // let lesserOfTwo = arr[indexOfMin];
         // arr[indexOfMin] = arr[i];
-        // arr[i] = lesserOfTwo;  
-        
-        [arr[i], arr[indexOfMin]] =  [arr[indexOfMin], arr[i]]
+        // arr[i] = lesserOfTwo; 
     }
 }   
 
@@ -45,7 +46,17 @@ function mergeSort(arr) {
 }
 
 function merge(left, right) {
+    const results = [];
 
+    while(left.length && right.length) {
+       if(left[0] < right[0]) { 
+        results.push(left.shift());
+    } else {
+        results.push(right.shift());
+        }
+    }
+
+    return [...results, ...left, ...right];
 }
 
 module.exports = { bubbleSort, selectionSort, mergeSort, merge };
