@@ -15,7 +15,11 @@ function reverseInt(n) {
     //     return parseInt(reversed); * -1;
     // }
 
-    return parseInt(reversed) * Math.sign(n);
+    let result = parseInt(reversed) * Math.sign(n);
+    console.log(result);
+    return result;
 }
+
+reverseInt(12345);
 
 module.exports = reverseInt;
