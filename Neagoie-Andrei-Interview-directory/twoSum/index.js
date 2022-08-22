@@ -25,17 +25,20 @@
 /* solution using hashmap
    {numToFind: index}
 
-
+   nums = [1, 3, 7, 9, 2]
+   
 */
 
-const findTwoSum = function(nums, target) {
+var twoSum = function(nums, target) {
     const numsMap = {};
-    for(let p =0; p <nums.length; p++) {
+    
+    for(let p = 0; p <nums.length; p++) {
         const currentMapVal = numsMap[nums[p]];
+
         if(currentMapVal >= 0) {
             return [currentMapVal, p];
         } else {
-            const numberToFin = target - nums[p];
+            const numberToFind = target - nums[p];
             numsMap[numberToFind] = p;
         }
     }
