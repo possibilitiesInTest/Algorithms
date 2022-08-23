@@ -25,6 +25,8 @@ const getTrappedRainwater = function(heights) {
         }
         left++;
       } else {
+    //  Is this pointer value greater than
+    //  or equal to max on that side
         if(heights[right] >= maxRight) {
     //   yes -> update max on that side
             maxRight = heights[right];
