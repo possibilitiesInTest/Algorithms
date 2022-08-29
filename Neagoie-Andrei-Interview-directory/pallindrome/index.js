@@ -37,6 +37,7 @@ const validSubPalindrome = function (s, left, right) {
         left++;
         right--;
     }
+    return true;
 }
 
 
