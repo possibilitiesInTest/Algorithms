@@ -27,18 +27,18 @@ class ListNode {
 const reverseLinkedList = function(head) {
     // init prev as null: final linked list
     // init current as received head
-    let prev = null;
+    let listSoFar = null;
     let current = head;
 
     // while current is truthy
-    // update next to next after current
-    // update current.next to prev(pointing to reversed list)
-    // update prev to current(reversed list)
-    // update current to next(increment process on next in list)
+    // store next value
+    // update next value to listSoFar
+    // store current node as listSoFar
+    // update current to stored next value 
     while(current) {
         let next = current.next;
-        current.next = prev;
-        prev = current;
+        current.next = listSoFar;
+        listSoFar = current;
         current = next;
     }
     return prev;
